@@ -1,0 +1,186 @@
+
+# ==========================================
+# ASP.NET CORE 10 / C# BACKEND
+# ==========================================
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+[Aa]rtifacts/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.ide
+
+# Rider
+.idea/
+*.sln.iml
+
+# C# compiler files
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# ASP.NET Core
+wwwroot/lib/
+appsettings.Development.json
+appsettings.Local.json
+
+# User secrets
+secrets.json
+
+# Entity Framework Core
+**/Migrations/*_Snapshot.cs.tmp
+
+# ==========================================
+# REACT / VITE FRONTEND
+# ==========================================
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+
+# Vite
+.vite/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager
+.npm/
+.yarn/*
+!.yarn/patches/
+!.yarn/plugins/
+!.yarn/releases/
+!.yarn/versions/
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+.nyc_output/
+
+# ==========================================
+# POSTGRESQL / DATABASE
+# ==========================================
+
+# Database backups and dumps
+*.sql.bak
+*.dump
+*.backup
+*.bak
+*.pgsql
+*.db
+*.sqlite
+*.sqlite3
+
+# Local database data directories
+postgres-data/
+pgdata/
+database-data/
+
+# ==========================================
+# ENVIRONMENT / SECRETS
+# ==========================================
+
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Certificates and private keys
+*.pfx
+*.p12
+*.pem
+*.key
+*.crt
+
+# ==========================================
+# DOCKER
+# ==========================================
+
+# Docker local overrides
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ==========================================
+# OPERATING SYSTEM
+# ==========================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ==========================================
+# EDITORS
+# ==========================================
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig
+*.bak
+*.old
+
+# ==========================================
+# TEST / PERFORMANCE OUTPUTS
+# ==========================================
+
+TestResults/
+BenchmarkDotNet.Artifacts/
+*.coverage
+*.coveragexml
+
+# ==========================================
+# PUBLISH OUTPUTS
+# ==========================================
+
+publish/
+release/
+*.publishsettings
+*.azurePubxml
