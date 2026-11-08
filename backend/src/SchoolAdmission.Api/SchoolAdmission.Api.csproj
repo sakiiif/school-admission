@@ -15,4 +15,8 @@
     <ProjectReference Include="..\SchoolAdmission.Infrastructure\SchoolAdmission.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
