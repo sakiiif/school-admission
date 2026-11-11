@@ -1,24 +1,20 @@
-import { useQuery } from '@tanstack/react-query'
-import { api } from './api/client'
-import { toUserMessage } from './api/errors'
+import { ClassList } from './components/ClassList'
+import { NoticeBanner } from './components/NoticeBanner'
+import { StudentIdBar } from './components/StudentIdBar'
+import { useNotice } from './hooks/useNotice'
+import { useStudentId } from './hooks/useStudentId'
 
 export default function App() {
-  const { data, error, isPending } = useQuery({
-    queryKey: ['classes'],
-    queryFn: () => api.listClasses(),
-    refetchInterval: 3000,
-  })
+  const { draft, setDraft, studentId } = useStudentId()
+  const { notice, showSuccess, showError, dismiss } = useNotice()
 
   return (
     <main className="container">
       <h1>School Admission</h1>
-      {isPending && <p>Loading classes…</p>}
-      {error && (
-        <p role="alert" className="error">
-          {toUserMessage(error)}
-        </p>
-      )}
-      {data && <p>Connected to the server. {data.length} class(es) found.</p>}
+      <StudentIdBar value={draft} onChange={setDraft} isValid={studentId !== ''} />
+      <NoticeBanner notice={notice} onDismiss={dismiss} />
+      <ClassList studentId={studentId} showSuccess={showSuccess} showError={showError} />
     </main>
   )
 }
+
