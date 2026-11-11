@@ -24,6 +24,8 @@ body {
   border-radius: 6px;
 }
 
+/* --- */
+
 h1 {
   font-size: 1.5rem;
   margin: 8px 0 16px;
@@ -180,3 +182,87 @@ table.data {
   cursor: pointer;
   color: inherit;
 }
+
+/* -- */
+/* Keep messages visible even when the user is scrolled down the page */
+.notice {
+  position: sticky;
+  top: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--held {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge--confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge--expired {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge--cancelled {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.urgent {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-form {
+  display: grid;
+  gap: 12px;
+  max-width: 480px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+}
+
+.field input[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.field-error {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: #b91c1c;
+}
+

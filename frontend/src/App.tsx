@@ -1,4 +1,6 @@
 import { ClassList } from './components/ClassList'
+import { CreateClassForm } from './components/CreateClassForm'
+import { MyApplications } from './components/MyApplications'
 import { NoticeBanner } from './components/NoticeBanner'
 import { StudentIdBar } from './components/StudentIdBar'
 import { useNotice } from './hooks/useNotice'
@@ -14,6 +16,8 @@ export default function App() {
       <StudentIdBar value={draft} onChange={setDraft} isValid={studentId !== ''} />
       <NoticeBanner notice={notice} onDismiss={dismiss} />
       <ClassList studentId={studentId} showSuccess={showSuccess} showError={showError} />
+      <MyApplications studentId={studentId} showSuccess={showSuccess} showError={showError} />
+      <CreateClassForm showSuccess={showSuccess} showError={showError} />
     </main>
   )
 }
